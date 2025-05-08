@@ -1,0 +1,58 @@
+<header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center">
+          <span class="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-red-600 text-transparent bg-clip-text">LA MADRILEÑA</span>
+          <span class="ml-2 text-sm hidden md:inline">Bar Deportivo · Terraza</span>
+        </a>
+      </div>
+
+      <!-- Menú para desktop -->
+      <nav class="hidden md:flex gap-8">
+        <a href="#inicio" class="hover:text-yellow-400 transition-colors">Inicio</a>
+        <a href="#menu" class="hover:text-yellow-400 transition-colors">Menú</a>
+        <a href="#deportes" class="hover:text-yellow-400 transition-colors">Deportes</a>
+        <a href="#galeria" class="hover:text-yellow-400 transition-colors">Galería</a>
+        <a href="#nosotros" class="hover:text-yellow-400 transition-colors">Nosotros</a>
+        <a href="#contacto" class="hover:text-yellow-400 transition-colors">Contacto</a>
+      </nav>
+
+      <!-- Botón reserva para desktop -->
+      <div class="hidden md:block">
+        <a href="#reservas" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors">
+          <i class="fas fa-calendar-alt mr-2"></i> Reservar
+        </a>
+      </div>
+
+      <!-- Botón menú móvil -->
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col gap-3">
+        <a href="#inicio" class="block py-2 hover:text-yellow-400 transition-colors">Inicio</a>
+        <a href="#menu" class="block py-2 hover:text-yellow-400 transition-colors">Menú</a>
+        <a href="#deportes" class="block py-2 hover:text-yellow-400 transition-colors">Deportes</a>
+        <a href="#galeria" class="block py-2 hover:text-yellow-400 transition-colors">Galería</a>
+        <a href="#nosotros" class="block py-2 hover:text-yellow-400 transition-colors">Nosotros</a>
+        <a href="#contacto" class="block py-2 hover:text-yellow-400 transition-colors">Contacto</a>
+        <a href="#reservas" class="block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-center transition-colors">
+          <i class="fas fa-calendar-alt mr-2"></i> Reservar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Menú móvil
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</header>
