@@ -1,22 +1,23 @@
 {
   "name": "eleventy-tailwinds",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
     "dev": "eleventy --serve & npx  @tailwindcss/cli -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
     "build": "NODE_ENV=production eleventy && npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css --minify",
     "clear": "rm -rf _site"
   },
-  "author": "duanly Vega Alderete",
+  "author": "<thyronemiguevegasantana@gmail.com>",
   "license": "MIT",
-  "description": "",
+  "description": "La Madrileña Churrera en las Palmas",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@tailwindcss/cli": "^4.1.5",
     "autoprefixer": "^10.4.21",
-    "cross-env": "^7.0.3",
-    "cssnano": "^7.0.7",
-    "postcss-cli": "^11.0.1",
+    "eleventy-google-fonts": "^0.1.0",
     "tailwindcss": "^4.1.5"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^6.0.2"
   }
 }
