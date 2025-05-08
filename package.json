@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "eleventy --serve & npx  @tailwindcss/cli -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
-    "build": "NODE_ENV=production eleventy && npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css --minify"
+    "build": "NODE_ENV=production eleventy && npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css --minify",
+    "clear": "rm -rf _site"
   },
   "author": "duanly Vega Alderete",
   "license": "MIT",
