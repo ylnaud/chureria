@@ -2,6 +2,7 @@
   "name": "eleventy-tailwinds",
   "version": "1.0.0",
   "main": ".eleventy.js",
+  "type": "commonjs",
   "scripts": {
     "dev": "eleventy --serve & npx  @tailwindcss/cli -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
     "build": "NODE_ENV=production eleventy && npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css --minify",
@@ -12,6 +13,7 @@
   "description": "La Madrileña Churrera en las Palmas",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/font-awesome": "^1.0.0-beta.1",
     "@tailwindcss/cli": "^4.1.5",
     "autoprefixer": "^10.4.21",
     "eleventy-google-fonts": "^0.1.0",

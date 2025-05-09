@@ -7,7 +7,7 @@ module.exports = {
     extend: {},
     theme: {
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"], // Inter + fallback
+        sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"], // Inter + fallback
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"], // Fuentes del sistema
       },
     },

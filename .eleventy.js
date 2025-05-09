@@ -2,15 +2,13 @@ const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const eleventyGoogleFonts = require("eleventy-google-fonts");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/assets/");
+  // Configuración para copiar los archivos
+  eleventyConfig.addPassthroughCopy("src/assets");
+
+  // Resto de tu configuración...
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    // output image formats
-    formats: ["avif", "webp", "jpeg"],
-
-    // output image widths
+    formats: ["webp", "jpeg"],
     widths: ["auto"],
-
-    // optional, attributes assigned on <img> nodes override these values
     htmlOptions: {
       imgAttributes: {
         loading: "lazy",
@@ -19,8 +17,9 @@ module.exports = function (eleventyConfig) {
       pictureAttributes: {},
     },
   });
-  // Crear un shortcode para generar CSS en línea de Google Fonts
+
   eleventyConfig.addPlugin(eleventyGoogleFonts);
+
   return {
     dir: {
       input: "src",
