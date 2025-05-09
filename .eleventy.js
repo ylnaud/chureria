@@ -3,6 +3,12 @@ const eleventyGoogleFonts = require("eleventy-google-fonts");
 
 module.exports = function (eleventyConfig) {
   // Configuración para copiar los archivos
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@fortawesome/fontawesome-free/webfonts": "assets/webfonts",
+    "node_modules/@fortawesome/fontawesome-free/css/all.min.css":
+      "assets/css/fontawesome.css",
+  });
+
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // Resto de tu configuración...
