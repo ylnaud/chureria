@@ -1,2 +1,8 @@
+[build]
+  command = "npm install --production=false && npm run build"
+  publish = "_site"
+
 [build.environment]
+  NODE_ENV = "production"
+  NODE_DEV = "development"
   NODE_VERSION = "22.15.0"
