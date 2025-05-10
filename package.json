@@ -4,9 +4,9 @@
   "main": ".eleventy.js",
   "type": "commonjs",
   "scripts": {
-    "dev": "eleventy --serve & npx  @tailwindcss/cli -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
-    "build": "NODE_ENV=production eleventy && npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css --minify",
-    "clear": "rm -rf _site "
+    "dev": "eleventy --serve & npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
+    "build": "NODE_ENV=production eleventy && node minify-assets.js",
+    "clear": "rm -rf _site"
   },
   "engines": {
     "node": ">=22.15.0"
@@ -24,7 +24,10 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.5",
     "autoprefixer": "^10.4.21",
-    "tailwindcss": "^4.1.5"
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "tailwindcss": "^4.1.5",
+    "terser": "^5.39.0"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",

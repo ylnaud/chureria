@@ -689,6 +689,7 @@ body {
   
   <main>
     
+    
 <!-- Sección Hero -->
 <section class="bg-gray-900 text-white py-20" id="inicio">
   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
@@ -1216,7 +1217,7 @@ body {
 
           <div>
             <label for="message" class="block mb-2 font-medium">Mensaje</label>
-            <textarea id="message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Tu mensaje..." required=""></textarea>
+            <textarea id="message" rows="5" class="auto-expand w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 resize-none overflow-hidden" placeholder="Tu mensaje..." required=""></textarea>
           </div>
 
           <button type="submit" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300">
@@ -1280,10 +1281,14 @@ body {
             </div>
           </div>
         </div>
+   
+       <div class="relative mt-8 cursor-pointer group w-full max-w-2xl mx-auto aspect-video js-map-lite">
+  <picture><source type="image/webp" srcset="/img/REMGEmmzVS-1000.webp 1000w"><img loading="lazy" decoding="async" src="/img/REMGEmmzVS-1000.jpeg" alt="Mapa de ubicación" class="w-full h-full object-cover rounded-lg shadow" width="1000" height="750"></picture>
+  <div class="absolute top-0 left-0 w-full h-full bg-transparent group-hover:bg-black/10 transition" role="button" aria-label="Mostrar mapa" tabindex="0">
+  </div>
+</div>
 
-        <div class="mt-8">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.215450707012!2d-15.43278772404242!3d28.12336487584835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40950f6a5e5c6b%3A0x3a8e8b4c1a0d9a1!2sC.%20Ripoche%2C%207%2C%2035007%20Las%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg shadow"></iframe>
-        </div>
+
       </div>
     </div>
   </div>
@@ -1345,7 +1350,7 @@ body {
 
       <div>
         <label for="reservation-notes" class="block mb-2 font-medium">Notas adicionales (opcional)</label>
-        <textarea id="reservation-notes" rows="3" class="w-full px-4 py-2 border border-gray-600 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Alergias, requerimientos especiales, etc."></textarea>
+        <textarea id="reservation-notes" rows="3" class="auto-expand w-full px-4 py-2 border border-gray-600 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 resize-none overflow-hidden" placeholder="Alergias, requerimientos especiales, etc."></textarea>
       </div>
 
       <div class="text-center pt-4">
@@ -1444,5 +1449,6 @@ body {
 </footer>
   
   <script src="/assets/js/main.js"></script>
+  
 </body>
 </html>
