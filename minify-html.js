@@ -2,31 +2,38 @@ const fs = require("fs");
 const path = require("path");
 const { minify } = require("html-minifier-terser");
 
-async function minifyAllHtml(dir = "_site") {
+async function minifyHTML(dir = "src") {
   const entries = fs.readdirSync(dir);
-
   for (const entry of entries) {
     const fullPath = path.join(dir, entry);
     const stats = fs.statSync(fullPath);
 
     if (stats.isDirectory()) {
-      await minifyAllHtml(fullPath);
+      await minifyHTML(fullPath);
     } else if (stats.isFile() && entry.endsWith(".html")) {
+      const relPath = path.relative("src", fullPath);
+      const outputPath = path.join("_site", relPath);
       const html = fs.readFileSync(fullPath, "utf-8");
+
       try {
         const minified = await minify(html, {
           collapseWhitespace: true,
           removeComments: true,
-          minifyCSS: true,
           minifyJS: true,
+          minifyCSS: true,
         });
-        fs.writeFileSync(fullPath, minified);
-        console.log("✅ Minificado:", fullPath);
+
+        const dirOut = path.dirname(outputPath);
+        fs.mkdirSync(dirOut, { recursive: true });
+        fs.writeFileSync(outputPath, minified);
+        console.log(`✅ HTML minificado: ${relPath}`);
       } catch (err) {
-        console.error("❌ Error:", fullPath, err);
+        console.error(`❌ Error minificando ${relPath}:`, err);
       }
     }
   }
 }
 
-minifyAllHtml();
+(async () => {
+  await minifyHTML();
+})();
