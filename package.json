@@ -4,7 +4,8 @@
   "main": ".eleventy.js",
   "type": "commonjs",
   "scripts": {
-    "dev": "eleventy --serve & npx  @tailwindcss/cli -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
+    "format": "prettier --write \"src/**/*.njk\"",
+    "dev": "eleventy --serve & npx  @tailwindcss/cli -i src/assets/css/styles.css -o _site/assets/css/styles.css  --watch --port=4000",
     "build": "NODE_ENV=production eleventy  && npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css --minify && node minify-html.js",
     "clear": "rm -rf _site "
   },
@@ -25,6 +26,8 @@
     "@tailwindcss/cli": "^4.1.5",
     "autoprefixer": "^10.4.21",
     "html-minifier-terser": "^7.2.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.1.5"
   },
   "dependencies": {

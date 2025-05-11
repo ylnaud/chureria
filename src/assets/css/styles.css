@@ -4,3 +4,33 @@
 @theme {
   --font-poppins: Poppins, sans-serif;
 }
+
+/* Transiciones para los iconos */
+#hamburger-icon,
+#close-icon {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover para enlaces móviles */
+.mobile-link {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.tab-button.active {
+  color: #e53e3e;
+  border-bottom: 2px solid #e53e3e;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

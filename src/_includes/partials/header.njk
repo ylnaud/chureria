@@ -1,57 +1,125 @@
-<header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+<header class="sticky top-0 z-50 bg-gray-900 text-white shadow-lg">
   <div class="container mx-auto px-4">
-    <div class="flex justify-between items-center h-16">
+    <div class="flex h-16 items-center justify-between">
       <!-- Logo -->
-      <div class="flex items-center flex-shrink-0">
+      <div class="flex flex-shrink-0 items-center">
         <a href="/" class="flex items-center">
-          <span class="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-red-600 text-transparent bg-clip-text">LA MADRILEÑA</span>
-          <span class="ml-2 text-sm hidden md:inline">Bar Deportivo · Terraza</span>
+          <span
+            class="bg-gradient-to-r from-yellow-400 to-red-600 bg-clip-text text-2xl font-bold text-transparent"
+            >LA MADRILEÑA</span
+          >
+          <span class="ml-2 hidden text-sm md:inline">Bar Deportivo · Terraza</span>
         </a>
       </div>
 
       <!-- Menú para desktop -->
-      <nav class="hidden md:flex items-center space-x-8">
-        <a href="#inicio" class="hover:text-yellow-400 transition-colors scroll-smooth">Inicio</a>
-        <a href="#menu" class="hover:text-yellow-400 transition-colors scroll-smooth">Menú</a>
-        <a href="#deportes" class="hover:text-yellow-400 transition-colors scroll-smooth">Deportes</a>
-        <a href="#galeria" class="hover:text-yellow-400 transition-colors scroll-smooth">Galería</a>
-        <a href="#nosotros" class="hover:text-yellow-400 transition-colors scroll-smooth">Nosotros</a>
-        <a href="#contacto" class="hover:text-yellow-400 transition-colors scroll-smooth">Contacto</a>
-        <a href="#reservas" class="ml-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors scroll-smooth">
+      <nav class="hidden items-center space-x-8 md:flex">
+        <a href="#inicio" class="scroll-smooth transition-colors hover:text-yellow-400">Inicio</a>
+        <a href="#menu" class="scroll-smooth transition-colors hover:text-yellow-400">Menú</a>
+        <a href="#deportes" class="scroll-smooth transition-colors hover:text-yellow-400"
+          >Deportes</a
+        >
+        <a href="#galeria" class="scroll-smooth transition-colors hover:text-yellow-400">Galería</a>
+        <a href="#nosotros" class="scroll-smooth transition-colors hover:text-yellow-400"
+          >Nosotros</a
+        >
+        <a href="#contacto" class="scroll-smooth transition-colors hover:text-yellow-400"
+          >Contacto</a
+        >
+        <a
+          href="#reservas"
+          class="ml-4 scroll-smooth rounded-lg bg-red-600 px-4 py-2 text-white transition-colors hover:bg-red-700"
+        >
           <i class="fas fa-calendar-alt mr-2"></i> Reservar
         </a>
       </nav>
 
       <!-- Botón menú hamburguesa móvil -->
-      <div class="md:hidden flex items-center">
-        <button id="hamburger-button" class="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none" aria-expanded="false">
+      <div class="flex items-center md:hidden">
+        <button
+          id="hamburger-button"
+          class="inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none"
+          aria-expanded="false"
+        >
           <!-- Icono Hamburguesa -->
-          <svg id="hamburger-icon" class="h-6 w-6 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          <svg
+            id="hamburger-icon"
+            class="h-6 w-6 transition-all duration-300"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
           <!-- Icono X (inicialmente oculto) -->
-          <svg id="close-icon" class="h-6 w-6 transition-all duration-300 absolute opacity-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          <svg
+            id="close-icon"
+            class="absolute h-6 w-6 opacity-0 transition-all duration-300"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </div>
     </div>
 
     <!-- Menú móvil -->
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 transition-all duration-300 ease-in-out">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-400">Inicio</a>
-        <a href="#menu" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-400">Menú</a>
-        <a href="#deportes" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-400">Deportes</a>
-        <a href="#galeria" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-400">Galería</a>
-        <a href="#nosotros" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-400">Nosotros</a>
-        <a href="#contacto" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-yellow-400">Contacto</a>
-        <a href="#reservas" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-center bg-red-600 text-white hover:bg-red-700">
+    <div
+      id="mobile-menu"
+      class="hidden bg-gray-800 transition-all duration-300 ease-in-out md:hidden"
+    >
+      <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
+        <a
+          href="#inicio"
+          class="mobile-link block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-400"
+          >Inicio</a
+        >
+        <a
+          href="#menu"
+          class="mobile-link block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-400"
+          >Menú</a
+        >
+        <a
+          href="#deportes"
+          class="mobile-link block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-400"
+          >Deportes</a
+        >
+        <a
+          href="#galeria"
+          class="mobile-link block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-400"
+          >Galería</a
+        >
+        <a
+          href="#nosotros"
+          class="mobile-link block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-400"
+          >Nosotros</a
+        >
+        <a
+          href="#contacto"
+          class="mobile-link block rounded-md px-3 py-2 text-base font-medium text-white hover:text-yellow-400"
+          >Contacto</a
+        >
+        <a
+          href="#reservas"
+          class="mobile-link block rounded-md bg-red-600 px-3 py-2 text-center text-base font-medium text-white hover:bg-red-700"
+        >
           <i class="fas fa-calendar-alt mr-2"></i> Reservar
         </a>
       </div>
     </div>
   </div>
-
- 
 </header>
