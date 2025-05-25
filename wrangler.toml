@@ -1,0 +1,7 @@
+name = "my-worker"
+compatibility_date = "2025-05-23"
+
+[assets]
+directory = "./_site/"
+not_found_handling = "404"
+html_handling = "auto-trailing-slash"
