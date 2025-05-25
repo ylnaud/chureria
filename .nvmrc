@@ -1,1 +1,4 @@
-v22.15.0
+# .npmrc
+save-exact=true
+package-lock=false
+fund=false

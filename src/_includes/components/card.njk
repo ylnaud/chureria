@@ -1,0 +1,17 @@
+{% macro card(plato) %}
+<div
+  class="overflow-hidden rounded-lg bg-gray-700 shadow-lg transition-transform duration-300 hover:scale-105"
+>
+  <img src="{{ plato.imagen }}" alt="{{ plato.nombre }}" class="h-48 w-full object-cover" />
+  <div class="p-6">
+    <h3 class="mb-3 text-2xl font-bold">{{ plato.nombre }}</h3>
+    <p class="mb-4">{{ plato.descripcion }}</p>
+    <div class="flex items-center justify-between">
+      <span class="text-xl font-bold">{{ plato.precio }}</span>
+      <button class="rounded-lg bg-yellow-500 px-4 py-2 text-gray-900 hover:bg-yellow-600">
+        Pedir
+      </button>
+    </div>
+  </div>
+</div>
+{% endmacro %}

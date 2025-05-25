@@ -1,0 +1,164 @@
+{
+  "categorias": [
+    {
+      "nombre": "Tapas",
+      "subcategorias": [
+        {
+          "nombre": "Tapas Frías",
+          "items": [
+            {
+              "nombre": "Ensaladilla Rusa",
+              "descripcion": "Patata, zanahoria, atún y mayonesa casera",
+              "precio": "3.50 €"
+            },
+            {
+              "nombre": "Queso Manchego",
+              "descripcion": "Con membrillo y nueces",
+              "precio": "4.20 €"
+            },
+            {
+              "nombre": "Anchoas del Cantábrico",
+              "descripcion": "Con pan tostado y mantequilla",
+              "precio": "5.00 €"
+            }
+          ]
+        },
+        {
+          "nombre": "Tapas Calientes",
+          "items": [
+            {
+              "nombre": "Croquetas Caseras",
+              "descripcion": "Jamón ibérico o espinacas y queso (3 unidades)",
+              "precio": "4.50 €"
+            },
+            {
+              "nombre": "Patatas Bravas",
+              "descripcion": "Con nuestra salsa brava y alioli",
+              "precio": "3.80 €"
+            },
+            {
+              "nombre": "Chorizo a la Sidra",
+              "descripcion": "Chorizo asturiano cocido en sidra natural",
+              "precio": "4.20 €"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Raciones",
+      "subcategorias": [
+        {
+          "nombre": "Carnes",
+          "items": [
+            {
+              "nombre": "Secreto Ibérico",
+              "descripcion": "Con patatas panaderas",
+              "precio": "14.90 €"
+            },
+            {
+              "nombre": "Chuletón de Ternera",
+              "descripcion": "Para compartir (800gr aprox.)",
+              "precio": "28.50 €"
+            }
+          ]
+        },
+        {
+          "nombre": "Pescados",
+          "items": [
+            {
+              "nombre": "Pulpo a la Gallega",
+              "descripcion": "Con patatas y pimentón",
+              "precio": "16.50 €"
+            },
+            {
+              "nombre": "Bacalao al Pil-Pil",
+              "descripcion": "Con salsa de ajo y guindilla",
+              "precio": "15.80 €"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Bebidas",
+      "subcategorias": [
+        {
+          "nombre": "Bebidas Alcohólicas",
+          "items": [
+            {
+              "nombre": "Caña de Cerveza",
+              "descripcion": "Mahou o cerveza local",
+              "precio": "1.80 €"
+            },
+            {
+              "nombre": "Vino de la Casa",
+              "descripcion": "Tinto, blanco o rosado (copa)",
+              "precio": "2.50 €"
+            },
+            {
+              "nombre": "Sangría",
+              "descripcion": "Preparada al momento (jarra 1L)",
+              "precio": "8.00 €"
+            }
+          ]
+        },
+        {
+          "nombre": "Refrescos y Cafés",
+          "items": [
+            {
+              "nombre": "Refrescos",
+              "descripcion": "Coca-Cola, Fanta, Aquarius, etc.",
+              "precio": "2.00 €"
+            },
+            {
+              "nombre": "Agua Mineral",
+              "descripcion": "Con o sin gas (1L)",
+              "precio": "1.50 €"
+            },
+            {
+              "nombre": "Café",
+              "descripcion": "Solo, cortado, con leche",
+              "precio": "1.20 €"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Postres",
+      "subcategorias": [
+        {
+          "nombre": "Postres Caseros",
+          "items": [
+            {
+              "nombre": "Tarta de Santiago",
+              "descripcion": "Con helado de vainilla",
+              "precio": "4.50 €"
+            },
+            {
+              "nombre": "Flan de Huevo",
+              "descripcion": "Con nata montada",
+              "precio": "3.80 €"
+            }
+          ]
+        },
+        {
+          "nombre": "Helados",
+          "items": [
+            {
+              "nombre": "Copa de Helado",
+              "descripcion": "3 sabores a elegir",
+              "precio": "4.00 €"
+            },
+            {
+              "nombre": "Torrija",
+              "descripcion": "Con helado de vainilla",
+              "precio": "4.50 €"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

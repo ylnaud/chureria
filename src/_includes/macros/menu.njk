@@ -1,0 +1,47 @@
+{% macro menuTabs(menu) %}
+<section class="py-16" id="menu">
+  <div class="container mx-auto px-4">
+    <div class="mb-12 text-center">
+      <h2 class="mb-4 text-3xl font-bold">Nuestro Menú</h2>
+      <p class="text-xl text-gray-600">Descubre nuestra amplia variedad de platos</p>
+    </div>
+    <ul class="mb-8 flex flex-wrap justify-center border-b border-gray-200">
+      {% for categoria in menu.categorias %}
+      <li class="mr-2">
+        <button
+          class="tab-button {% if loop.first %}active{% endif %} px-4 py-2 font-medium"
+          data-tab="{{ categoria.nombre | lower }}"
+        >
+          {{ categoria.nombre }}
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+    {% for categoria in menu.categorias %}
+    <div
+      id="{{ categoria.nombre | lower }}"
+      class="tab-content {% if loop.first %}active{% else %}hidden{% endif %}"
+    >
+      <div class="grid gap-8 md:grid-cols-2">
+        {% for subcat in categoria.subcategorias %}
+        <div>
+          <h3 class="mb-6 text-2xl font-bold text-red-600">{{ subcat.nombre }}</h3>
+          <ul class="space-y-6">
+            {% for item in subcat.items %}
+            <li class="flex justify-between border-b border-gray-200 pb-4">
+              <div>
+                <h4 class="font-bold">{{ item.nombre }}</h4>
+                <p class="text-sm text-gray-600">{{ item.descripcion }}</p>
+              </div>
+              <span class="font-bold">{{ item.precio }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endmacro %}
