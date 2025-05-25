@@ -1,0 +1,13 @@
+<!-- src/verificacion.njk -->
+---
+layout: layouts/base.njk
+verificationRequired: true
+---
+
+<div class="verification-box">
+  <h1>Verificación de Seguridad</h1>
+  <form action="/.netlify/functions/verify" method="POST">
+    <div class="cf-turnstile" data-sitekey="{{ env.TURNSTILE_SITE_KEY }}"></div>
+    <button type="submit">Acceder al sitio</button>
+  </form>
+</div>

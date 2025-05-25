@@ -9,7 +9,8 @@ html_handling = "auto-trailing-slash"
 [observability.logs]
 enabled = true
 
-
-
+[vars]
+TURNSTILE_SITE_KEY = "@TURNSTILE_SITE_KEY"
+TURNSTILE_SECRET_KEY = "@TURNSTILE_SECRET_KEY"
 
 

@@ -7,6 +7,25 @@ import  * as terser from "terser";
 
 export default  function (eleventyConfig) {
 
+    // Inyectar variables de entorno
+  eleventyConfig.addGlobalData('env', {
+    TURNSTILE_SITE_KEY: process.env.TURNSTILE_SITE_KEY
+  });
+
+  // Redirigir todas las rutas a verificación (excepto /verify)
+  eleventyConfig.setServerOptions({
+    middleware: [
+      (req, res, next) => {
+        if (!req.url.startsWith('/verify') && !req.cookies.cf_verified) {
+          res.writeHead(302, { Location: '/verificacion' });
+          res.end();
+        } else {
+          next();
+        }
+      }
+    ]
+  });
+
   // Minificación HTML solo en producción
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
     if (process.env.NODE_ENV === "production" && outputPath?.endsWith(".html")) {
