@@ -1,4 +1,1 @@
-# .npmrc
-save-exact=true
-package-lock=false
-fund=false
+v22.15.0
