@@ -1,8 +1,14 @@
-name = "my-worker"
+# wrangler.toml
+name = 'churreria-es'
 compatibility_date = "2025-05-23"
 
-[assets]
-directory = "./_site/"
-not_found_handling = "404-page"
-html_handling = "auto-trailing-slash"
+assets = { directory = "./_site", binding = "ASSETS", html_handling = "force-trailing-slash", not_found_handling = "404-page" }
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
+
+
+
+
 
