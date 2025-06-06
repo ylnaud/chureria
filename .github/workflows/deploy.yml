@@ -1,5 +1,5 @@
 # .github/workflows/deploy.yml
-name: Deploy Eleventy site to GitHub Pages
+name: churreria-es
 
 on:
   push:
