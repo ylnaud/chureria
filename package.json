@@ -1,7 +1,7 @@
 {
   "name": "eleventy-tailwinds",
   "version": "1.0.0",
-
+  "type": "module",
   "main": ".eleventy.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.njk\"",
@@ -27,11 +27,11 @@
     "html-minifier-terser": "^7.2.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "terser": "^5.39.2"
+    "terser": "^5.40.0"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.0",
-    "@11ty/eleventy-img": "^6.0.2",
+    "@11ty/eleventy-img": "^6.0.4",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "eleventy-google-fonts": "^0.1.0",
     "tailwindcss": "^4.1.6"

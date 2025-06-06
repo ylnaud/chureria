@@ -2,6 +2,7 @@
   "recommendations": [
     "janne252.fontawesome-autocomplete",
     "eseom.nunjucks-template",
-    "streetsidesoftware.code-spell-checker-spanish"
+    "streetsidesoftware.code-spell-checker-spanish",
+    "bradlc.vscode-tailwindcss"
   ]
 }
