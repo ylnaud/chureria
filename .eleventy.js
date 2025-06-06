@@ -92,7 +92,7 @@ export default function (eleventyConfig) {
     "node_modules/@fortawesome/fontawesome-free/webfonts": "assets/webfonts",
     "node_modules/@fortawesome/fontawesome-free/css/all.min.css": "assets/css/fontawesome.css",
     "src/assets/js": "assets/js",
-    "src/assets/favicon.ico": "/favicon.ico",
+    "src/assets/favicon.ico": "/assets/favicon.ico",
   });
 
   // 6. Configuración final
