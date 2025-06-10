@@ -7,33 +7,35 @@
     <meta name="theme-color" content="#ffffff" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="{{ siteUrl }}{{ page.url }}" />
-    
-    <!-- Precarga de estilos críticos -->
-    <link rel="preload" href="/assets/css/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/css/critical.css"></noscript>
-    
-    <!-- Google Fonts debe cargarse ANTES de Tailwind -->
+
+    <!-- INLINED critical CSS -->
+    {% set css %} {% include "critical.css" %} {% endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
+
+    <!-- Google Fonts - Carga diferida -->
     {% googleFonts %}
-    
+
     <!-- Tailwind CSS -->
-    <link rel="preload" href="/assets/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/css/styles.css"></noscript>
-    
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <!-- Font Awesome -->
-    <link rel="preload" href="/assets/css/fontawesome.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/assets/css/fontawesome.css"></noscript>
-    
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/css/fontawesome.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
     <title>{{ title }}</title>
-    
+
     {% if verificationRequired %}
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+      <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     {% endif %}
   </head>
+
   <body class="font-poppins">
     {% include "partials/header.njk" %}
     <main>{{ content | safe }}</main>
     {% include "partials/footer.njk" %}
-    <script src="/assets/js/main.js"></script>
+
+    <!-- JS principal como módulo defer -->
+    <script type="module" src="/assets/js/index.js" defer></script>
   </body>
 </html>

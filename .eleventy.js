@@ -1,12 +1,13 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import eleventyGoogleFonts from "eleventy-google-fonts";
 import htmlmin from "html-minifier-terser";
+import CleanCSS from "clean-css";
 import * as terser from "terser";
 
-// Texto con caracteres en español (incluye acentos)
+// Texto con caracteres en español
 const fontText = "AÁÉÍÓÚÜÑaáéíóúüñBbCcDdEeFfGgHhIiJjKkLlMmNnÑñOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
 
-// Configuración de Google Fonts
+// Configuración de fuentes de Google
 const googleFonts = {
   fonts: [
     {
@@ -17,19 +18,22 @@ const googleFonts = {
     }
   ],
   formats: ["woff2"],
-  text: fontText  // Usa el texto con acentos aquí
+  text: fontText
 };
 
 export default function (eleventyConfig) {
   // 1. Plugins
-  eleventyConfig.addPlugin(eleventyGoogleFonts, googleFonts);
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["webp", "jpeg"],
-    widths: ["auto"],
-    sharpOptions: { quality: 80 }
-  });
+  eleventyConfig.addFilter("cssmin", function (code) {
+    return new CleanCSS({}).minify(code).styles;
+	});
+  // 2. Plugins
 
-  // 2. Transformaciones
+  eleventyConfig.addPlugin(eleventyGoogleFonts, googleFonts);
+  // 3. Plugins
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+
+  // 2. Transformaciones HTML
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
     if (process.env.NODE_ENV === "production" && outputPath?.endsWith(".html")) {
       return htmlmin.minify(content, {
@@ -50,7 +54,7 @@ export default function (eleventyConfig) {
     return content;
   });
 
-  // 3. Filtros
+  // 3. Filtro para JS minificado
   eleventyConfig.addFilter("jsmin", async (code) => {
     if (process.env.NODE_ENV === "production") {
       try {
@@ -67,35 +71,27 @@ export default function (eleventyConfig) {
     return code;
   });
 
-  // 4. Shortcodes
+  // 4. Shortcode de Google Fonts
   eleventyConfig.addShortcode("googleFonts", () => {
-      const encodedText = encodeURIComponent(fontText);
+    const encodedText = encodeURIComponent(fontText);
     return `
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preload" 
-            href="https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Color+Emoji&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&text=${encodedText}" 
-            as="style"
-            onload="this.onload=null;this.rel='stylesheet'">
-      <noscript>
-        <link rel="stylesheet" 
-              href="https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Color+Emoji&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&text=${encodedText}">
-      </noscript>
+      <link rel="stylesheet" 
+            href="https://fonts.googleapis.com/css2?family=Monoton&family=Noto+Color+Emoji&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&text=${encodedText}">
     `;
   });
 
-  // 5. Passthrough Copies
-  
+  // 5. Copias directas (passthrough)
   eleventyConfig.addPassthroughCopy({
-    
     "src/assets/css": "assets/css",
     "node_modules/@fortawesome/fontawesome-free/webfonts": "assets/webfonts",
     "node_modules/@fortawesome/fontawesome-free/css/all.min.css": "assets/css/fontawesome.css",
     "src/assets/js": "assets/js",
-    "src/assets/favicon.ico": "/assets/favicon.ico",
+     "src/assets/img/favicon.ico": "/favicon.ico"
   });
 
-  // 6. Configuración final
+  // 6. Configuración general
   return {
     dir: {
       input: "src",
@@ -109,3 +105,4 @@ export default function (eleventyConfig) {
     dataTemplateEngine: "njk"
   };
 }
+
