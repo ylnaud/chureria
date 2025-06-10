@@ -1,15 +1,22 @@
 {
   "name": "eleventy-tailwinds",
   "version": "1.0.0",
+  "description": "La Madrileña Churrera en las Palmas",
   "main": ".eleventy.js",
-  "scripts": {
-    "format": "prettier --write \"src/**/*.njk\"",
-    "dev": "npx @11ty/eleventy --serve & npx @tailwindcss/cli -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch ",
-    "build": "NODE_ENV=production npx @11ty/eleventy && npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css -m ",
-    "clear": "rm -rf _site"
-  },
+  "author": "<thyronemiguevegasantana@gmail.com>",
+  "license": "MIT",
   "engines": {
     "node": ">=22.15.0"
+  },
+  "scripts": {
+    "format": "prettier --write \"src/**/*.njk\"",
+    "dev": "npx @11ty/eleventy --serve & npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch",
+    "build": "NODE_ENV=production npx @11ty/eleventy && npx tailwindcss -i src/assets/css/styles.css -o _site/assets/css/styles.css -m",
+    "clear": "rm -rf _site",
+    "install:prod": "npm ci --omit=dev",
+    "test:a11y": "pa11y http://localhost:8080",
+    "test:html": "html-validate '_site/**/*.html'",
+    "test:lighthouse": "lhci autorun"
   },
   "netlify": {
     "build": {
@@ -18,16 +25,6 @@
       }
     }
   },
-  "author": "<thyronemiguevegasantana@gmail.com>",
-  "license": "MIT",
-  "description": "La Madrileña Churrera en las Palmas",
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.1.7",
-    "html-minifier-terser": "^7.2.0",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "terser": "^5.40.0"
-  },
   "dependencies": {
     "@11ty/eleventy": "^3.1.0",
     "@11ty/eleventy-img": "^6.0.4",
@@ -35,5 +32,15 @@
     "clean-css": "^5.3.3",
     "eleventy-google-fonts": "^0.1.0",
     "tailwindcss": "^4.1.6"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.15.0",
+    "@tailwindcss/cli": "^4.1.7",
+    "html-minifier-terser": "^7.2.0",
+    "html-validate": "^9.5.5",
+    "pa11y": "^9.0.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "terser": "^5.40.0"
   }
 }

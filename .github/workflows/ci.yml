@@ -1,0 +1,41 @@
+name: "CI Build and Test Eleventy Site"
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: 🔧 Build and Validate Site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: 🧰 Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc' # Usa versión de tu .nvmrc
+          cache: 'npm'
+
+      - name: 📦 Instalar dependencias
+        run: npm ci
+
+      - name: 🧹 Formatear clases de Tailwind
+        run: npm run format
+
+      - name: ⚙️ Compilar sitio con Eleventy
+        run: npm run build
+
+      - name: ✅ Validar HTML
+        run: npm run test:html
+
+      - name: ♿ Prueba de Accesibilidad con Pa11y
+        run: |
+          npx @11ty/eleventy --serve &
+          sleep 5
+          npm run test:a11y
+
+      - name: 🚦 Prueba de rendimiento con Lighthouse
+        run: npm run test:lighthouse
