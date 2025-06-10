@@ -1,8 +1,7 @@
 {
   "name": "eleventy-tailwinds",
   "version": "1.0.0",
-  "type": "module",
-  "main": ".eleventy.js",
+  "main": ".eleventy.cjs",
   "scripts": {
     "format": "prettier --write \"src/**/*.njk\"",
     "dev": "npx @11ty/eleventy --serve & npx @tailwindcss/cli -i src/assets/css/styles.css -o _site/assets/css/styles.css --watch ",
