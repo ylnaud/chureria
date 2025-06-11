@@ -47,7 +47,7 @@ export default function (eleventyConfig) {
         removeStyleLinkTypeAttributes: true,
         keepClosingSlash: true,
         preserveLineBreaks: false,
-        removeOptionalTags: true,
+        removeOptionalTags: false,
         caseSensitive: true
       });
     }
