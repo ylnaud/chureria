@@ -9,7 +9,8 @@
       {% for categoria in menu.categorias %}
       <li class="mr-2">
         <button
-          class="tab-button {% if loop.first %}active{% endif %} px-4 py-2 font-medium"
+          type="button"
+          class="tab-button {% if loop.first %}active{% endif %} px-4 py-2 font-medium text-red-50  bg-red-600"
           data-tab="{{ categoria.nombre | lower }}"
         >
           {{ categoria.nombre }}

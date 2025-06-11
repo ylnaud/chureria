@@ -9,28 +9,21 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
 <section class="bg-gray-900 py-20 text-white" id="inicio">
   <div class="container mx-auto flex flex-col items-center px-4 md:flex-row">
     <div class="mb-10 md:mb-0 md:w-1/2">
-      <h1
-        class="mb-6 bg-gradient-to-r  from-yellow-400 to-red-600 bg-clip-text text-4xl font-bold text-transparent md:text-5xl"
-      >
+      <h1 class="mb-6 bg-gradient-to-r  from-yellow-400 to-red-600 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
         La Madrileña - Pasión por el Deporte y la Buena Mesa
       </h1>
       <p class="mb-7 text-xl">
-        Disfruta de los mejores partidos, tapas auténticas y nuestro ambiente familiar en el corazón
-        de Las Palmas.
+        Disfruta de los mejores partidos, tapas auténticas y nuestro ambiente familiar en el corazón de Las Palmas.
       </p>
       <div class="flex  flex-wrap gap-4">
-        <a
-          href="#menu"
-          class="flex items-center rounded-lg bg-red-600 px-6 py-3 text-white hover:bg-red-700"
-        >
-          <i class="fas fa-utensils mr-2"></i>
+        <a href="#menu" class="flex items-center rounded-lg bg-red-600 px-6 py-3 text-white hover:bg-red-700">
+          <i class="fas fa-utensils mr-2" aria-label="Ver Menu"></i>
           Ver Menú
         </a>
         <a
           href="#reservas"
-          class="flex items-center  rounded-lg border-2 border-white px-6 py-3 text-white hover:bg-white hover:text-gray-900"
-        >
-          <i class="fas fa-calendar-alt mr-2"></i>
+          class="flex items-center  rounded-lg border-2 border-white px-6 py-3 text-white hover:bg-white hover:text-gray-900">
+          <i class="fas fa-calendar-alt mr-2" aria-label="Reservar Mesa"></i>
           Reservar Mesa
         </a>
       </div>
@@ -41,8 +34,7 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
         alt="Interior de La Madrileña"
         class="w-full rounded-lg shadow-2xl"
         width="1000"
-        height="750"
-      />
+        height="750"/>
     </div>
   </div>
 </section>
@@ -52,12 +44,15 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
   <div class="container mx-auto px-4">
     <h2 class="mb-4 text-center text-3xl font-bold">Nuestras Especialidades</h2>
     <div class="grid gap-8 md:grid-cols-2">
-      {% for plato in especialidades %} {{ components.card(plato) }} {% endfor %}
+      {% for plato in especialidades %}
+        {{ components.card(plato) }}
+      {% endfor %}
     </div>
   </div>
 </section>
 <!-- Sección Menú -->
-{% import "macros/menu.njk" as macros %} {{ macros.menuTabs(menu) }}
+{% import "macros/menu.njk" as macros %}
+{{ macros.menuTabs(menu) }}
 <!-- Sección Deportes -->
 <section class="bg-gray-800 py-16 text-white" id="deportes">
   <div class="container mx-auto px-4">
@@ -82,7 +77,7 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
         <h3 class="mb-3 text-xl font-bold">Todos los Partidos</h3>
         <p>
           Transmitimos LaLiga, Champions League, Premier League y los principales eventos
-          deportivos.
+                    deportivos.
         </p>
       </div>
       <div class="rounded-lg bg-gray-700 p-6 text-center">
@@ -105,45 +100,51 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
     <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
       <div class="overflow-hidden rounded-lg">
         <img
-          src="/assets/img/galerie/AJaAbjvYl8-1000.jpeg" width="1000" height="750"
+          src="/assets/img/galerie/AJaAbjvYl8-1000.jpeg"
+          width="1000"
+          height="750"
           alt="Interior del bar"
-          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"
-        />
+          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"/>
       </div>
       <div class="overflow-hidden rounded-lg">
         <img
-          src="/assets/img/galerie/H91RLZrI1Y-1000.jpeg" width="1000" height="668"
+          src="/assets/img/galerie/H91RLZrI1Y-1000.jpeg"
+          width="1000"
+          height="668"
           alt="Terraza"
-          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"
-        />
+          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"/>
       </div>
       <div class="overflow-hidden rounded-lg">
         <img
-          src="/assets/img/galerie/I1J5Yu6wE4-1000.jpeg" width="1000" height="668"
+          src="/assets/img/galerie/I1J5Yu6wE4-1000.jpeg"
+          width="1000"
+          height="668"
           alt="Bocadillo de calamares"
-          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"
-        />
+          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"/>
       </div>
       <div class="overflow-hidden rounded-lg">
         <img
-          src="/assets/img/galerie/Nr441JHqmz-1000.jpeg" width="1000" height="712"
+          src="/assets/img/galerie/Nr441JHqmz-1000.jpeg"
+          width="1000"
+          height="712"
           alt="Tortilla española"
-          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"
-        />
+          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"/>
       </div>
       <div class="overflow-hidden rounded-lg">
         <img
-          src="/assets/img/galerie/o-1Ar5VVdY-1000.jpeg" width="1000" height="750"
+          src="/assets/img/galerie/o-1Ar5VVdY-1000.jpeg"
+          width="1000"
+          height="750"
           alt="Familia comiendo"
-          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"
-        />
+          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"/>
       </div>
       <div class="overflow-hidden rounded-lg">
         <img
-          src="/assets/img/galerie/X9EpkWfKqE-1000.jpeg" width="1000" height="667"
+          src="/assets/img/galerie/X9EpkWfKqE-1000.jpeg"
+          width="1000"
+          height="667"
           alt="Partido de fútbol"
-          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"
-        />
+          class="h-48 w-full object-cover transition-transform duration-300 hover:scale-110"/>
       </div>
     </div>
   </div>
@@ -165,15 +166,10 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
           <i class="fas fa-star"></i>
         </div>
         <p class="mb-6 italic">
-          "El mejor lugar para ver los partidos del Real Madrid. La comida es excelente y el
-          ambiente es increíble."
+          "El mejor lugar para ver los partidos del Real Madrid. La comida es excelente y el ambiente es increíble."
         </p>
         <div class="flex items-center">
-          <img
-            src="/assets/img/users/foto1.jpg" width="50" height="50"
-            alt="Juan P."
-            class="mr-4 h-12 w-12 rounded-full"
-          />
+          <img src="/assets/img/users/foto1.jpg" width="50" height="50" alt="Juan P." class="mr-4 h-12 w-12 rounded-full"/>
           <div>
             <h4 class="font-bold">Juan P.</h4>
             <p class="text-sm text-gray-600">Cliente frecuente</p>
@@ -189,15 +185,10 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
           <i class="fas fa-star"></i>
         </div>
         <p class="mb-6 italic">
-          "La terraza es perfecta para disfrutar de las tardes de verano. Las tapas son auténticas y
-          muy sabrosas."
+          "La terraza es perfecta para disfrutar de las tardes de verano. Las tapas son auténticas y muy sabrosas."
         </p>
         <div class="flex items-center">
-          <img
-            src="/assets/img/users/foto2.jpg" width="50" height="50"
-            alt="María L."
-            class="mr-4 h-12 w-12 rounded-full"
-          />
+          <img src="/assets/img/users/foto2.jpg" width="50" height="50" alt="María L." class="mr-4 h-12 w-12 rounded-full"/>
           <div>
             <h4 class="font-bold">María L.</h4>
             <p class="text-sm text-gray-600">Primera visita</p>
@@ -213,15 +204,10 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
           <i class="fas fa-star-half-alt"></i>
         </div>
         <p class="mb-6 italic">
-          "Llevo yendo años y nunca me decepcionan. El trato es familiar y el secreto ibérico es
-          para repetir."
+          "Llevo yendo años y nunca me decepcionan. El trato es familiar y el secreto ibérico es para repetir."
         </p>
         <div class="flex items-center">
-          <img
-            src="/assets/img/users/foto3.jpg" width="50" height="50"
-            alt="Andrés F."
-            class="mr-4 h-12 w-12 rounded-full"
-          />
+          <img src="/assets/img/users/foto3.jpg" width="50" height="50" alt="Andrés F." class="mr-4 h-12 w-12 rounded-full"/>
           <div>
             <h4 class="font-bold">Andrés F.</h4>
             <p class="text-sm text-gray-600">Cliente desde 2018</p>
@@ -242,13 +228,12 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
       <div class="mb-8 md:mb-0 md:w-1/2 md:pr-8">
         <h3 class="mb-6 text-2xl font-bold">Sabores con Tradición</h3>
         <p class="mb-4">
-          La Madrileña abrió sus puertas en 2010 con el objetivo de traer los sabores auténticos de
-          Madrid a Las Palmas de Gran Canaria. Desde entonces, nos hemos convertido en un referente
-          de la gastronomía española en la isla.
+          La Madrileña abrió sus puertas en 2010 con el objetivo de traer los sabores auténticos de Madrid a Las Palmas de Gran
+          Canaria. Desde entonces, nos hemos convertido en un referente de la gastronomía española en la isla.
         </p>
         <p class="mb-6">
-          Nuestro nombre rinde homenaje a la capital española, pero nuestro corazón es canario. Esta
-          mezcla nos permite ofrecer lo mejor de ambas culturas.
+          Nuestro nombre rinde homenaje a la capital española, pero nuestro corazón es canario. Esta mezcla nos permite ofrecer lo
+          mejor de ambas culturas.
         </p>
         <h3 class="mb-6 text-2xl font-bold">Nuestra Filosofía</h3>
         <ul class="space-y-3">
@@ -272,10 +257,11 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
       </div>
       <div class="md:w-1/2">
         <img
-          src="/assets/img/historia/historia.jpeg" width="1000" height="667"
+          src="/assets/img/historia/historia.jpeg"
+          width="1000"
+          height="667"
           alt="Equipo de La Madrileña"
-          class="w-full rounded-lg shadow-xl"
-        />
+          class="w-full rounded-lg shadow-xl"/>
       </div>
     </div>
   </div>
@@ -298,8 +284,7 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
               id="name"
               class="w-full rounded-lg border px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
               placeholder="Tu nombre"
-              required
-            />
+              required/>
           </div>
           <div>
             <label for="email" class="mb-2 block font-medium">Correo electrónico</label>
@@ -308,8 +293,7 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
               id="email"
               class="w-full rounded-lg border px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
               placeholder="tu@email.com"
-              required
-            />
+              required/>
           </div>
           <div>
             <label for="phone" class="mb-2 block font-medium">Teléfono (opcional)</label>
@@ -317,23 +301,22 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
               type="tel"
               id="phone"
               class="w-full rounded-lg border px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
-              placeholder="+34 123 456 789"
-            />
+              placeholder="+34 123 456 789"/>
           </div>
           <div>
             <label for="message" class="mb-2 block font-medium">Mensaje</label>
             <textarea
               id="message"
               rows="5"
-              class="auto-expand w-full resize-none overflow-hidden rounded-lg border px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
+              class="auto-expand w-full resize-none overflow-hidden rounded-lg border px-4 py-2 focus:ring-2 focus:ring-red-500
+                focus:outline-none"
               placeholder="Tu mensaje..."
-              required
-            ></textarea>
+              required></textarea>
           </div>
           <button
+            aria-label="Enviar Mensaje"
             type="submit"
-            class="rounded-lg bg-red-600 px-6 py-3 font-medium text-white transition-colors duration-300 hover:bg-red-700"
-          >
+            class="rounded-lg bg-red-600 px-6 py-3 font-medium text-white transition-colors duration-300 hover:bg-red-700">
             <i class="fas fa-paper-plane mr-2"></i>
             Enviar Mensaje
           </button>
@@ -376,28 +359,11 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
             <h4 class="mb-3 font-bold">Síguenos</h4>
             <div class="flex space-x-4">
               <a
-                href="#"
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-colors duration-300 hover:bg-red-600"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-colors duration-300 hover:bg-red-600"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="#"
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-colors duration-300 hover:bg-red-600"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-colors duration-300 hover:bg-red-600"
-              >
-                <i class="fab fa-tripadvisor"></i>
+                href="https://www.tripadvisor.es/Restaurant_Review-g187472-d10757609-Reviews-Churreria_La_Madrilena-Las_Palmas_de_Gran_Canaria_Gran_Canaria_Canary_Islands.html"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white transition-colors duration-300
+                  hover:bg-red-600"
+                aria-label="Opiniones en TripAdvisor">
+                <i class="fab fa-tripadvisor" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -423,8 +389,7 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
             id="reservation-name"
             class="w-full rounded-lg border border-gray-600 bg-gray-700 px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
             placeholder="Tu nombre"
-            required
-          />
+            required/>
         </div>
         <div>
           <label for="reservation-email" class="mb-2 block font-medium">Correo electrónico</label>
@@ -433,8 +398,7 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
             id="reservation-email"
             class="w-full rounded-lg border border-gray-600 bg-gray-700 px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
             placeholder="tu@email.com"
-            required
-          />
+            required/>
         </div>
         <div>
           <label for="reservation-phone" class="mb-2 block font-medium">Teléfono</label>
@@ -443,8 +407,7 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
             id="reservation-phone"
             class="w-full rounded-lg border border-gray-600 bg-gray-700 px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
             placeholder="+34 123 456 789"
-            required
-          />
+            required/>
         </div>
         <div>
           <label for="reservation-date" class="mb-2 block font-medium">Fecha</label>
@@ -452,8 +415,7 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
             type="date"
             id="reservation-date"
             class="w-full rounded-lg border border-gray-600 bg-gray-700 px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
-            required
-          />
+            required/>
         </div>
         <div>
           <label for="reservation-time" class="mb-2 block font-medium">Hora</label>
@@ -461,16 +423,14 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
             type="time"
             id="reservation-time"
             class="w-full rounded-lg border border-gray-600 bg-gray-700 px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
-            required
-          />
+            required/>
         </div>
         <div>
           <label for="reservation-guests" class="mb-2 block font-medium">Número de personas</label>
           <select
             id="reservation-guests"
             class="w-full rounded-lg border border-gray-600 bg-gray-700 px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
-            required
-          >
+            required>
             <option value="">Selecciona...</option>
             <option value="1">1 persona</option>
             <option value="2">2 personas</option>
@@ -487,21 +447,19 @@ description: 'La Madrileña en Las Palmas de Gran Canaria - Disfruta de buena co
         </div>
       </div>
       <div>
-        <label for="reservation-notes" class="mb-2 block font-medium"
-          >Notas adicionales (opcional)</label
-        >
+        <label for="reservation-notes" class="mb-2 block font-medium">Notas adicionales (opcional)</label>
         <textarea
           id="reservation-notes"
           rows="3"
-          class="auto-expand w-full resize-none overflow-hidden rounded-lg border border-gray-600 bg-gray-700 px-4 py-2 focus:ring-2 focus:ring-red-500 focus:outline-none"
-          placeholder="Alergias, requerimientos especiales, etc."
-        ></textarea>
+          class="auto-expand w-full resize-none overflow-hidden rounded-lg border border-gray-600 bg-gray-700 px-4 py-2
+            focus:ring-2 focus:ring-red-500 focus:outline-none"
+          placeholder="Alergias, requerimientos especiales, etc."></textarea>
       </div>
       <div class="pt-4 text-center">
         <button
+          aria-label="Confirmar Reserva"
           type="submit"
-          class="rounded-lg bg-red-600 px-8 py-3 font-medium text-white transition-colors duration-300 hover:bg-red-700"
-        >
+          class="rounded-lg bg-red-600 px-8 py-3 font-medium text-white transition-colors duration-300 hover:bg-red-700">
           <i class="fas fa-calendar-check mr-2"></i>
           Confirmar Reserva
         </button>

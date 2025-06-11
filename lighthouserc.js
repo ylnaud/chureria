@@ -1,8 +1,8 @@
 module.exports = {
   ci: {
     collect: {
-      startServerCommand: "npx @11ty/eleventy --serve",
-      url: ["http://localhost:8080"],
+      startServerCommand: "npx serve _site",
+      url: ["http://localhost:3000"],
       numberOfRuns: 1
     },
     assert: {

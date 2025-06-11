@@ -4,6 +4,7 @@
   "description": "La Madrileña Churrera en las Palmas",
   "main": ".eleventy.js",
   "author": "<thyronemiguevegasantana@gmail.com>",
+  "type": "module",
   "license": "MIT",
   "engines": {
     "node": ">=22.15.0"
