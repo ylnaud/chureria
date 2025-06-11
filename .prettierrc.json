@@ -1,0 +1,16 @@
+{
+  
+  "printWidth": 80,
+  "singleQuote": true,
+  "trailingComma": "es5",
+
+
+  "overrides": [
+    {
+      "files": "*.njk",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
+}
