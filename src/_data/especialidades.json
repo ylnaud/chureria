@@ -1,26 +1,23 @@
 [
-  {
-    "nombre": "Bocadillo de Calamares",
-    "descripcion": "Nuestra versión del clásico madrileño...",
-    "imagen": "/assets/img/especialidad/96JbPgTH7M-1000.jpeg",
-    "precio": "5.50 €"
-  },
-  {
-    "nombre": "Tortilla Española",
-    "descripcion": "Preparada al estilo tradicional...",
-    "imagen": "/assets/img/especialidad/H91RLZrI1Y-1000.jpeg",
-    "precio": "4.80 €"
-  },
-  {
-    "nombre": "Tabla de Ibéricos",
-    "descripcion": "Selección de los mejores jamones...",
-    "imagen": "/assets/img/especialidad/hola.jpeg",
-    "precio": "12.90 €"
-  },
-  {
-    "nombre": "Text de prueba",
-    "descripcion": "Selección de los mejores jamones...",
-    "imagen": "/assets/img/especialidad/hola.jpeg",
-    "precio": "12.70 €"
-  }
+    {
+        "nombre": "Bocadillo de Calamares",
+        "descripcion": "Nuestra versión del clásico madrileño...",
+        "imagen": "/assets/img/especialidad/96JbPgTH7M-1000.jpeg",
+        "precio": "5.50 €"
+    }, {
+        "nombre": "Tortilla Española",
+        "descripcion": "Preparada al estilo tradicional...",
+        "imagen": "/assets/img/especialidad/H91RLZrI1Y-1000.jpeg",
+        "precio": "4.80 €"
+    }, {
+        "nombre": "Tabla de Ibéricos",
+        "descripcion": "Selección de los mejores jamones...",
+        "imagen": "/assets/img/especialidad/hola.jpeg",
+        "precio": "12.90 €"
+    }, {
+        "nombre": "Text de prueba",
+        "descripcion": "Selección de los mejores jamones...",
+        "imagen": "/assets/img/especialidad/hola.jpeg",
+        "precio": "12.70 €"
+    }
 ]

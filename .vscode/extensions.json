@@ -3,6 +3,8 @@
     "janne252.fontawesome-autocomplete",
     "eseom.nunjucks-template",
     "streetsidesoftware.code-spell-checker-spanish",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "mblode.pretty-formatter",
+    "codium.codium"
   ]
 }

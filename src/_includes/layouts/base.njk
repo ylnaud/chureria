@@ -1,40 +1,36 @@
 <!DOCTYPE html>
 <html lang="es" class="md:scroll-auto">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{description}}" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="{{ siteUrl }}{{ page.url }}" />
-
-    <!-- INLINED critical CSS -->
-    {% set css %} {% include "critical.css" %} {% endset %}
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="{{ description }}"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="robots" content="index, follow"/>
+    <link
+    rel="canonical" href="{{ siteUrl }}{{ page.url }}"/> <!-- INLINED critical CSS -->
+    {% set css %}
+    {% include "critical.css" %}
+    {% endset %}
     <style>
-      {{ css | cssmin | safe }}
-    </style>
-
+      {{css | cssmin | safe}}</style>
     <!-- Google Fonts - Carga diferida -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     {% googleFonts %}
-
     <!-- Tailwind CSS -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <!-- Font Awesome -->
+    <link
+    rel="stylesheet" href="/assets/css/styles.css"> <!-- Font Awesome -->
     <link rel="stylesheet" href="/assets/css/fontawesome.css">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
     <title>{{ title }}</title>
-
     {% if verificationRequired %}
       <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     {% endif %}
   </head>
-
   <body class="font-poppins">
     {% include "partials/header.njk" %}
-    <main>{{ content | safe }}</main>
+<main aria-label="Contenido principal">{{ content | safe }}</main>
     {% include "partials/footer.njk" %}
-
     <!-- JS principal como módulo defer -->
     <script type="module" src="/assets/js/index.js"></script>
   </body>

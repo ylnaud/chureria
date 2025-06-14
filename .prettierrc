@@ -1,0 +1,5 @@
+{
+  "trailingComma": "es5",  // Cambiado a 'es5' para añadir comas al final en ES5
+  "endOfLine": "crlf",     // Cambiado a 'crlf' para usar saltos de línea estilo Windows
+  "trimTrailingWhitespace": false  // Cambiado a 'false' para no eliminar espacios en blanco al final
+}
